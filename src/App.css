@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1c1e26ef;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #fff;
+}
+
+#time-left {
+  font-size: 8rem;
+}
+
+#start_stop,
+#reset {
+  margin-top: 40px;
+}
+
+button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: none;
+  padding: 12px 24px;
+  margin: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.fa-play,
+.fa-pause,
+.fa-sync-alt {
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #1c1e26e7;
+  color: #fff;
+}
+
+#app-container header {
+  padding: 30px;
+  flex-direction: column;
+  /* background-color: #eb144c; */
+  background: linear-gradient(
+    175.1deg,
+    #e45a93 0%,
+    #ef7a7e 51.84%,
+    #f8b795 100%
+  );
+  color: #fff;
+  border-radius: 40px 40px 0 0;
+}
+
+.fas {
+  padding: 8px;
+}
+
+.fa-arrow-circle-down,
+.fa-arrow-circle-up {
+  height: 40px;
+  width: 40px;
+  color: #f28f81;
+  transition: color 0.3s ease-in-out;
+}
+
+.fa-arrow-circle-up:hover,
+.fa-arrow-circle-down:hover {
+  color: #1c1e26e7;
+}
+
+.adjust-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 0 0 40px 40px;
+  background-color: #fff;
+}
+
+#app-container {
+  width: 45vw;
+}
+
+.time-adjust-wrapper {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 8px;
+}
+
+@media (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  #app-container {
+    width: 100vw;
+  }
+  #app-container header,
+  footer {
+    border-radius: 0;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .time-adjust-wrapper {
+    margin-top: 8px;
+    width: 100%;
+  }
+  .adjust-time {
+    width: 50%;
+  }
+}
+
+@media (min-width: 600px) {
+  #app-container {
+    width: 480px;
+  }
+  .adjust-time {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #app-container {
+    width: 780px;
+  }
+  .adjust-time {
+    width: 45%;
+  }
+}
