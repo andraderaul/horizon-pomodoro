@@ -1,7 +1,7 @@
 # Horizon Pomodoro
 Existe um repositório chamado [App Ideas Collection](https://github.com/florinpop17/app-ideas) que basicamente reúne várias ideias de aplicativos com intuito de testar suas habilidades, então resolvi selecionar uma dessas ideias e codificar.
 
-## Sobre
+## Sobre o desafio
 Decidi realizar esse desafio utilizando a Biblioteca ReactJs com o plus de somente utilizar a api de [Hooks](https://pt-br.reactjs.org/docs/hooks-reference.html) para gerência de estado da aplicação. Além disso, um outro plus foi deixar as cores da aplicação o mais parecido com o tema Horizon do VsCode. 
 
 ### Recursos
