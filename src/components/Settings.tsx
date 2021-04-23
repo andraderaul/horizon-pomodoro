@@ -1,8 +1,21 @@
 import React from "react";
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
-import PropTypes from "prop-types";
 
-function Settings({ label, mode, length, increment, decrement }) {
+type SettingsProps = {
+  label: string;
+  mode: string;
+  length: number;
+  increment: (mode: string) => void;
+  decrement: (mode: string) => void;
+};
+
+function Settings({
+  label,
+  mode,
+  length,
+  increment,
+  decrement,
+}: SettingsProps) {
   const incrementMode = () => increment(mode);
   const decrementMode = () => decrement(mode);
 
@@ -23,13 +36,5 @@ function Settings({ label, mode, length, increment, decrement }) {
     </div>
   );
 }
-
-Settings.propTypes = {
-  label: PropTypes.string.isRequired,
-  mode: PropTypes.string.isRequired,
-  length: PropTypes.number.isRequired,
-  increment: PropTypes.func.isRequired,
-  decrement: PropTypes.func.isRequired,
-};
 
 export default Settings;
