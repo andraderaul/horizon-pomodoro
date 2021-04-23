@@ -59,12 +59,12 @@ button {
 button:hover {
   background-color: #1c1e26e7;
   color: #fff;
+  cursor: pointer;
 }
 
 #app-container header {
   padding: 30px;
   flex-direction: column;
-  /* background-color: #eb144c; */
   background: linear-gradient(
     175.1deg,
     #e45a93 0%,
@@ -117,6 +117,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.time-adjust-wrapper > div > span:hover {
+  cursor: pointer;
 }
 
 p {

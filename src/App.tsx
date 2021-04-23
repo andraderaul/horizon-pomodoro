@@ -4,7 +4,6 @@ import { FaPlay, FaPause, FaSyncAlt } from "react-icons/fa";
 
 import useInterval from "./hooks/UseInterval";
 import { displayTimeLeft } from "./utils/utils";
-import harpa from "./audio/guitar.mp3";
 
 import "./App.css";
 
@@ -13,7 +12,9 @@ import Timer from "./components/Timer";
 import Button from "./components/Button";
 import Settings from "./components/Settings";
 
-function App(props) {
+const harpa = require("./audio/guitar.mp3");
+
+function App() {
   /* hooks */
   const [breakLength, setBreakLength] = useState(5);
   const [sessionLength, setSessionLength] = useState(25);
@@ -46,7 +47,7 @@ function App(props) {
     isRunning ? 1000 : null
   );
 
-  const increment = (mode) => {
+  const increment = (mode: string) => {
     if (isRunning) return;
 
     if (mode === "session" && sessionLength <= 59) {
@@ -57,7 +58,7 @@ function App(props) {
     }
   };
 
-  const decrement = (mode) => {
+  const decrement = (mode: string) => {
     if (isRunning) return;
 
     if (mode === "session" && sessionLength >= 2) {
